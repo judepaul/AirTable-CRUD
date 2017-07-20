@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  processor: MyText
+  storage: 1
+  battery: 1
+  display: 
+  display: 
+
+two:
+  name: MyText
+  processor: MyText
+  storage: 1
+  battery: 1
+  display: 
+  display: 

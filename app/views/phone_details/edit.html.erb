@@ -1,0 +1,73 @@
+<h1>Editing Phone Detail</h1>
+
+<%= form_tag({:controller => "phone_details", :action => "update"}, :method => "patch") do %>  
+
+<div class="container">
+	<div class="row"><br/></div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%= label_tag :name, "Name:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%= text_field_tag :name, @phone_detail[:name] %>
+		</div>
+	</div>
+	<div class="row"><br/></div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%= label_tag :processor, "Processor:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%= text_field_tag :processor, @phone_detail[:processor] %>
+		</div>
+	</div>
+	<div class="row"><br/></div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%= label_tag :storage, "Storage:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%= text_field_tag :storage, @phone_detail[:storage] %>
+		</div>
+	</div>
+	<div class="row"><br/></div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%= label_tag :battery, "Battery:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%= text_field_tag :battery, @phone_detail[:battery] %>
+		</div>
+	</div>
+	<div class="row"><br/></div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%= label_tag :display, "Display:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%= text_field_tag :display, @phone_detail[:display] %>
+		</div>
+	</div>
+	<div class="row"><br/></div>
+	<!-- <div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-2 ">
+			<%#= label_tag :release_date, "Release Date:" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-4 ">
+			<%#= text_field_tag :release_date, params[:release_date] %>
+		</div>
+	</div>
+	<div class="row"><br/></div> -->
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-lg-1 col-lg-offset-2 ">
+			<%= link_to 'Cancel', phone_details_path, class: "btn btn-default" %>
+		</div>
+		<div class="col-xs-12 col-md-8 col-lg-2">
+			<%= submit_tag "Save", name: nil, class: "btn btn-default" %>   
+		</div>
+	</div>
+</div>
+<br/>
+
+
+<% end %>

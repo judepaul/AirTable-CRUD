@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Listing Phone Details</h3>
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+	  <th>S.No.</th>
+      <th>Name</th>
+      <th>Processor</th>
+      <th>Storage</th>
+      <th>Battery</th>
+      <th>Display</th>
+	  <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phone_details.each_with_index do |phone_detail, indx| %>
+      <tr>
+		<td><%= phone_detail[:id] %></td>
+        <td><%= phone_detail[:name] %></td>
+        <td><%= phone_detail[:processor] %></td>
+        <td><%= phone_detail[:storage] %></td>
+        <td><%= phone_detail[:battery] %></td>
+        <td><%= phone_detail[:display] %></td>
+		<td>
+			<%= link_to 'Edit', edit_phone_detail_path(phone_detail.id) %> | 
+			<%= link_to 'Delete', phone_detail_path(phone_detail.id), method: :delete, data: { confirm: 'Are you sure want to delete?' } %> 
+		</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<div class="row">
+	<div class="col-xs-12 col-md-8 col-lg-4 col-lg-offset-10 ">
+	<%= link_to 'Add Phone detail', new_phone_detail_path, class: "btn btn-default" %>
+</div>
